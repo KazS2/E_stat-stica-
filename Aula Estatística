@@ -1,0 +1,50 @@
+## Usado a parte II do link a seguir: https://gist.github.com/eliardocosta/a5c39e218ff5899720f54735e8bf2d44
+# PARTE II ----------------------------------------------------------------
+
+attach(dados_estud)
+
+# slide 31
+median(Peso)                                                    ## tivemos que adicionar
+quantile(Peso, probs = 0.50)
+
+# slide 32
+quantile(Peso, probs = 0.25) # Q1
+quantile(Peso, probs = 0.50) # Q2
+quantile(Peso, probs = 0.75) # Q3
+quantile(Peso)                                                  ## Adicionado por fora 
+
+# slide 36
+boxplot(Peso, ylab = "Peso (kg)")
+boxplot(Peso, xlab = "Peso (kg)", horizontal = TRUE)
+
+# slide 37
+boxplot(Peso ~ Sexo, ylab = "Peso (kg)")
+boxplot(Peso ~ Sexo, xlab = "Peso (kg)", horizontal = TRUE)
+
+boxplot(Peso ~ Turma, ylab = "Peso (kg)")
+
+boxplot(Peso ~ Fuma, ylab = "Peso (kg)")
+
+# slide 42
+mean(Idade)
+summary(Idade)
+
+# slide 43
+n = lenght(Peso)
+mean(Peso)
+sum(Peso)/n
+min(Peso)
+max(Peso)
+summary(Peso)
+max(Peso) - min(Peso)
+
+# slide 55
+quantile(Peso, probs = 0.75) - quantile(Peso, probs = 0.25)
+
+# slide 56
+var(Peso)
+sd(Peso)
+
+sd(Idade)
+
+boxplot(Idade ~ Sexo)
